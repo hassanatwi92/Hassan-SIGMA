@@ -253,30 +253,32 @@
     </footer>
 
     <!-- JavaScript to Handle WhatsApp Redirect -->
-    <script>
-        document.getElementById('insuranceForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // حط رقم الواتساب تبعك هون المخصص للشغل (مع رمز البلد ومن دون إشارات زائد أو أصفار بالبدي)
-            // مثال: 96170123456
-            const myWhatsAppNumber = "+96176059770"; 
+<script>
+document.getElementById('insuranceForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
 
-            // جلب الداتا من الفورم
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const type = document.getElementById('type').value;
-            const review = document.getElementById('review').value;
+    const myWhatsAppNumber = "96176059770"; 
 
-            // تنسيق رسالة الواتساب الاحترافية اللي رح تجيك
-            const textMessage = `مرحباً، لقد تلقيت طلباً جديداً من صفحة الهبوط:%0A%0A` +
-                                `*الاسم:* ${encodeURIComponent(name)}%0A` +
-                                `*رقم اتصال الزبون:* ${encodeURIComponent(phone)}%0A` +
-                                `*نوع التأمين:* ${encodeURIComponent(type)}%0A` +
-                                `*مراجعة بوليصة حالية:* ${encodeURIComponent(review)}`;
+    // جلب الداتا من الحقول
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const type = document.getElementById('type').value;
+    const review = document.getElementById('review').value;
 
-            // فتح رابط الواتساب مباشرة
-            const whatsappUrl = `https://api.whatsapp.com/send?phone=${myWhatsAppNumber}&text=${textMessage}`;
-            window.open(whatsappUrl, '_blank');
-        </script>
+    // تنسيق نص الرسالة مع المسافات والأسطر بشكل نظيف
+    let textMessage = `مرحباً، لقد تلقيت طلباً جديداً من صفحة الهبوط:%0A%0A` +
+                      `*الاسم:* ${encodeURIComponent(name)}%0A` +
+                      `*رقم اتصال الزبون:* ${encodeURIComponent(phone)}%0A` +
+                      `*نوع التأمين:* ${encodeURIComponent(type)}%0A` +
+                      `*مراجعة بوليصة حالية:* ${encodeURIComponent(review)}`;
+
+    // الرابط المعتمد والأقوى للتحويل المباشر في الموبايل والكمبيوتر
+    const whatsappUrl = `https://wa.me/${myWhatsAppNumber}?text=${textMessage}`;
+    
+    // فتح الرابط فوراً في نافذة جديدة وتحويل الزبون
+    window.open(whatsappUrl, '_blank');
+});
+</script>
 </body>
 </html>
