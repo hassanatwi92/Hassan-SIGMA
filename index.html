@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستشار التأمين الذكي | حلول Sigma الاحترافية</title>
+    <!-- Google Fonts line for Professional Arabic Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* الألوان المستوحاة من هوية سيغما الرسمية */
+        :root {
+            --primary-color: #0d2c54; /* الكحلي الأساسي */
+            --secondary-color: #1a73e8; /* الأزرق المساعد */
+            --text-dark: #2d3748;
+            --bg-light: #f7fafc;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #174276 100%);
+            color: var(--white);
+            padding: 80px 0 60px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--secondary-color);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            opacity: 0.9;
+        }
+
+        .btn-main {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-main:hover {
+            background-color: #135cb8;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        /* Form Section */
+        .form-section {
+            background-color: #edf2f7;
+            padding: 60px 0;
+        }
+
+        .form-container {
+            background: var(--white);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(26,115,232,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            header p { font-size: 1rem; }
+            .form-container { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header>
+        <div class="container">
+            <h1>استشارة احترافية.. حماية حقيقية لعائلتك وأعمالك</h1>
+            <p>بصفتنا مستشارين مستقلين مع خبرة ممتدة في السوق اللبناني، نحن لا نبيعك بوليصة تأمين فقط، بل نختار لك التغطية الأفضل التي تحمي مصالحك وميزانيتك بأعلى شفافية.</p>
+            <a href="#quote-form" class="btn-main">اطلب استشارتك الآن</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">برامج التغطية والحماية المتاحة</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>تأمين الرعاية الصحية</h3>
+                    <p>تغطية طبية شاملة تضمن لك ولعائلتك دخول أفضل المستشفيات في لبنان دون قلق من المصاريف المفاجئة والأعباء المالية المرتفعة.</p>
+                </div>
+                <div class="service-card">
+                    <h3>تأمين السيارات مرن</h3>
+                    <p>حلول ذكية وبأسعار مدروسة لحماية سيارتك (ضد الغير, التأمين الإلزامي و التأمين الشامل) مع سرعة فائقة وموثوقية عالية في تعويض الأضرار.</p>
+                </div>
+                <div class="service-card">
+                    <h3>تأمين الشركات والأصول</h3>
+                    <p>دراسة استراتيجية شاملة للمخاطر التي تواجه ممتلكات شركتك وموظفيك، وتقديم حلول مخصصة تضمن استمرارية أعمالك ونموها.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section" id="quote-form">
+        <div class="container">
+            <h2 class="section-title">احصل على تسعيرة مخصصة خلال دقائق</h2>
+            <div class="form-container">
+                <form id="insuranceForm">
+                    <div class="form-group">
+                        <label for="name">الاسم الكريم</label>
+                        <input type="text" id="name" class="form-control" placeholder="أدخل اسمك الكامل" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">رقم الواتساب</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="مثال: 96170123456" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="type">نوع التأمين المطلوب</label>
+                        <select id="type" class="form-control" required>
+                            <option value="" disabled selected>اختر نوع التأمين</option>
+                            <option value="صحي فردي / عائلي">تأمين صحي (فردي / عائلي)</option>
+                            <option value="سيارات">تأمين سيارات</option>
+                            <option value="شركات وممتلكات">تأمين شركات وممتلكات وأصول</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="review">هل لديك بوليصة حالية وتريد مراجعتها لتوفير المال؟</label>
+                        <select id="review" class="form-control">
+                            <option value="لا، أريد تسعيرة جديدة فقط">لا، أريد تسعيرة جديدة فقط</option>
+                            <option value="نعم، أريد مراجعة بوليصتي الحالية لتوفير المال">نعم، أريد مراجعة بوليصتي الحالية لتوفير المال</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-main" style="width: 100%; border-radius: 5px;">أرسل الطلب ليتواصل فريقنا معك عبر الواتساب</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>مستشار تأمين معتمد لدى شركة Sigma Brokers & Consultants</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">&copy; 2026 جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript to Handle WhatsApp Redirect -->
+    <script>
+        document.getElementById('insuranceForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // حط رقم الواتساب تبعك هون المخصص للشغل (مع رمز البلد ومن دون إشارات زائد أو أصفار بالبدي)
+            // مثال: 96170123456
+            const myWhatsAppNumber = "+96176059770"; 
+
+            // جلب الداتا من الفورم
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const type = document.getElementById('type').value;
+            const review = document.getElementById('review').value;
+
+            // تنسيق رسالة الواتساب الاحترافية اللي رح تجيك
+            const textMessage = `مرحباً، لقد تلقيت طلباً جديداً من صفحة الهبوط:%0A%0A` +
+                                `*الاسم:* ${encodeURIComponent(name)}%0A` +
+                                `*رقم اتصال الزبون:* ${encodeURIComponent(phone)}%0A` +
+                                `*نوع التأمين:* ${encodeURIComponent(type)}%0A` +
+                                `*مراجعة بوليصة حالية:* ${encodeURIComponent(review)}`;
+
+            // فتح رابط الواتساب مباشرة
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${myWhatsAppNumber}&text=${textMessage}`;
+            window.open(whatsappUrl, '_blank');
+        </script>
+</body>
+</html>
