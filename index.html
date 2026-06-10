@@ -174,10 +174,42 @@
             header p { font-size: 1rem; }
             .form-container { padding: 25px; }
         }
+
+
+/* تنسيق شريط اللوغو المركزي الاحترافي */
+.company-navbar-centered {
+    background-color: var(--white);
+    border-bottom: 2px solid #e2e8f0;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.navbar-container-centered {
+    display: flex;
+    justify-content: center; /* توسيط اللوغو بالمنتصف تماماً */
+    align-items: center;
+    width: 100%;
+}
+
+.centered-logo {
+    max-height: 140px; /* حجم ممتاز وواضح للّوغو */
+    width: auto;      /* للمحافظة على أبعاد الصورة الرسمية دون تشويه */
+    display: block;
+    max-width: 90%;   /* لحماية التصميم على الشاشات الصغيرة والموبايل */
+}
+
+/* ضبط المسافة للهيدر الأزرق ليتناسق مع اللوغو المركزي */
+header {
+    padding: 50px 0 50px 0;
+}
     </style>
 </head>
 <body>
-
+<div class="company-navbar-centered">
+    <div class="navbar-container-centered">
+        <img src="logo.png" alt="Sigma Insurance Brokers" class="centered-logo">
+    </div>
+</div>
     <!-- Hero Section -->
     <header>
         <div class="container">
@@ -267,7 +299,7 @@ document.getElementById('insuranceForm').addEventListener('submit', function(e) 
     const review = document.getElementById('review').value;
 
     // تنسيق نص الرسالة مع المسافات والأسطر بشكل نظيف
-    let textMessage = `مرحباً، لقد تلقيت طلباً جديداً من صفحة الهبوط:%0A%0A` +
+    let textMessage = `مرحباً،%0A%0A` +
                       `*الاسم:* ${encodeURIComponent(name)}%0A` +
                       `*رقم اتصال الزبون:* ${encodeURIComponent(phone)}%0A` +
                       `*نوع التأمين:* ${encodeURIComponent(type)}%0A` +
